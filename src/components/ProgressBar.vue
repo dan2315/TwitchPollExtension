@@ -5,34 +5,42 @@ const props = defineProps(['value'])
 <template>
     <div class="progress-background">
         <div class="progress-line"></div>
-        <div id="progress-text">{{value}}</div>
+        <p class="progress-text">{{value}}</p>
     </div>
 
 </template>
 
 <style>
 
+
 .progress-background {
-    position: relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
-    background-color: gray;
-    text-align: center;
+  justify-content: center;
+  align-items: center;
 
-    display: flex;
-    height: 40px;
-    width: 100%;
+  background-color: rgb(206, 206, 206);
+  border-radius: 5px;
+  padding: 0 4px;
+
+  height: 40px;
+  width: 100%;
 }
 
 .progress-line {
-    position: absolute;
-
-    background-color: red;
-    height: 90%;
-    width: v-bind('props.value');
+  align-self: flex-start;
+  border-radius: 5px;
+  background-color: red;
+  height: 80%;
+  width: v-bind("props.value");
 }
 
-#progress-text{
-    z-index: 999;
+.progress-text {
+  margin: 0;
+
+  position: absolute;
 }
 
 </style>

@@ -16,7 +16,8 @@
     "primevue": "^3.33.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
-    "vuejs-progress-bar": "^1.2.8"
+    "vuejs-progress-bar": "^1.2.8",
+    "websocket": "^1.0.34"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.2",
